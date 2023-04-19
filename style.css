@@ -1,0 +1,627 @@
+/* 下準備 */
+body {
+   margin: 0;
+   padding: 0;
+   color: black;
+   font-family: 'Noto Serif JP', serif;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+li,
+table,
+tr,
+th,
+td,
+dl,
+dt,
+dd {
+   margin: 0;
+   padding: 0;
+}
+
+input {
+   font-size: 1rem;
+}
+
+img {
+   max-width: 100%;
+   vertical-align: bottom;
+}
+
+/* 下準備ここまで */
+
+h2 {
+   font-size: 2rem;
+   line-height: 1;
+   color: black;
+   font-family: "游明朝", "Yu Mincho", Yumincho, serif;
+   text-align: center;
+   padding-top: 60px;
+}
+
+h3 {
+   font-size: 1.5rem;
+   line-height: 1;
+   color: black;
+   text-align: center;
+
+   /* h3の横の線要追加 */
+
+   position: relative;
+   margin-top: 45px;
+}
+
+/* h3の横の線 */
+
+h3::before {
+   content: '';
+   border-top: 4px solid #cac4b8;
+   display: block;
+   position: absolute;
+   width: 100%;
+   top: calc(50% - 2px);
+}
+
+/* html h3をspanで囲む */
+
+h3 span {
+   background-color: #fff;
+   padding: 0 20px;
+   position: relative;
+}
+
+h4 {
+   font-size: 1.125rem;
+   line-height: 1;
+   color: black;
+   text-align: center;
+   padding-top: 40px;
+
+   /* h4の横の線要追加 */
+   position: relative;
+   padding-bottom: 12px;
+
+}
+
+h4::before {
+   content: '';
+   border-top: 4px solid #cac4b8;
+   display: block;
+   position: absolute;
+   width: 50px;
+   left: calc(50% - 25px);
+   bottom: 0;
+}
+
+p {
+   line-height: 1.875;
+   padding-top: 30px;
+}
+
+.container {
+   margin: 0 40px;
+}
+
+.button {
+   text-align: center;
+   padding-top: 40px;
+}
+
+.button a,
+.button input {
+   background-color: aqua;
+   color: black;
+   padding: 25px 0;
+   font-weight: bold;
+   text-decoration: none;
+   min-width: 260px;
+   display: inline-block;
+   background-image: url(img/icn_arrow.png);
+   background-repeat: no-repeat;
+   border-radius: 39px;
+   background-size: 24px 24px;
+   background-position: right 20px center;
+   box-shadow: 0 8px 8px rgba(0, 0, 0, .16);
+   text-indent: -15px;
+   appearance: none;
+
+}
+
+.button a:hover,
+.button a:focus,
+.button input:hover,
+.button input:focus {
+   background-color: #9F3448;
+}
+
+header h1 {
+   text-align: left;
+   padding-top: 40px;
+   padding-bottom: 35px;
+}
+
+header h1 img {
+   width: 300px;
+   height: auto;
+}
+
+.history {
+   background-image: url(img/guitar\ history.jpg);
+   background-size: contain;
+   background-repeat: no-repeat;
+   padding-bottom: 55vw;
+   background-position: center bottom -6vw;
+
+}
+
+.tokucho .bg {
+   background-image: url(img/bg_tokucho.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center bottom;
+}
+
+.tokucho h2 {
+   color: #fff;
+   padding-top: 30px;
+}
+
+.tokucho ul {
+   color: #fff;
+   padding-top: 30px;
+
+}
+
+.tokucho li {
+   padding-top: 1em;
+   margin-left: 1em;
+}
+
+.tokucho li:first-child {
+   padding-top: 0;
+}
+
+.tokucho .container {
+   padding-top: 50px;
+   padding-bottom: 60px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.osusume ul {
+   list-style: none;
+}
+
+.osusume li {
+   margin-top: 30px;
+}
+
+.osusume .new::after {
+   content: '';
+   /* background-image: url(img/icn_new.png);*/
+   display: block;
+   width: 76px;
+   height: 82px;
+   background-size: 76px 82px;
+   position: absolute;
+   top: 20px;
+   left: 16px;
+}
+
+.osusume .new {
+   position: relative;
+}
+
+.osusume section+section {
+   margin-top: 80px;
+}
+
+.tenchoosusume {
+   margin-top: 60px;
+   background-image: linear-gradient(#f5f4ef, #fff);
+}
+
+.tenchoosusume img {
+   padding-top: 20px;
+}
+
+.tenchoosusume table {
+   border: 2px solid #CBC4B7;
+   border-collapse: collapse;
+}
+
+.tenchoosusume th {
+   border-top: 2px solid #cbc4b7;
+   padding: 16px;
+   font-size: 0.9rem;
+   line-height: 1.7;
+   text-align: left;
+}
+
+.tenchoosusume th[scope="row"] {
+   border-right: 2px solid #cbc4b7;
+   background-color: #fff;
+   white-space: nowrap;
+   font-weight: normal;
+
+}
+
+.tenchoosusume th[scope="col"] {
+   border-bottom: 2px solid #CBC4B7;
+   background-color: #f5f4ef;
+}
+
+.tenchoosusume td {
+   border-bottom: 2px solid #CBC4B7;
+   padding: 16px;
+   background-color: #fff;
+   font-size: 0.875rem;
+   line-height: 1.7;
+}
+
+.shop img {
+   padding-top: 20px;
+}
+
+.shop dl {
+   padding-top: 30px;
+}
+
+.shop dt {
+   font-weight: bold;
+}
+
+.shop .shop-data {
+   padding-top: 10px;
+}
+
+.shop .shop-data div {
+   display: flex;
+}
+
+.shop .shop-data dt {
+   min-width: 5em;
+}
+
+.shitsumon {
+   margin-top: 50px;
+   background-image: linear-gradient(#f5f4ef, #fff);
+}
+
+.shitsumon form {
+   padding-top: 30px;
+}
+
+.shitsumon input[type="text"] {
+   width: 100%;
+   padding: 1em;
+   box-sizing: border-box;
+}
+
+.shitsumon input[type="submit"] {
+   border: none;
+}
+
+footer {
+   margin-top: 65px;
+   background-color: aqua;
+   color: black;
+}
+
+footer a {
+   color: #fff;
+}
+
+footer dl {
+   color: #fff;
+}
+
+footer dd {
+   display: flex;
+   justify-content: center;
+
+
+}
+
+footer .container {
+   padding: 54px 0;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+}
+
+.go-to-top {
+   position: fixed;
+   z-index: 1;
+   font-size: 12px;
+   right: 20px;
+   bottom: 20px;
+}
+
+.go-to-top button {
+   display: inline-block;
+   padding: 10px;
+   background-color: #222;
+   border: none;
+   border-radius: 50%;
+   color: #fff;
+   cursor: pointer;
+}
+
+.tokucho em {
+   font-weight: bold;
+   font-style: normal;
+}
+
+
+@media (min-width:768px) {
+   .container {
+      max-width: 740px;
+      margin: auto;
+   }
+}
+
+h2 {
+   padding-top: 78px;
+   font-size: 2.25rem;
+}
+
+h4 {
+   padding-top: 50px;
+}
+
+p {
+   text-align: center;
+}
+
+p span {
+   display: block;
+}
+
+.button {
+   padding-top: 30px;
+}
+
+header h1 {
+   padding-top: 50px;
+}
+
+header h1 img {
+   width: 250px
+}
+
+.carousel {
+   min-width: 980px;
+}
+
+.tenchoosusume {
+   margin-top: 85px;
+}
+
+.tenchoosusume p {
+   text-align: center;
+}
+
+.tenchoosusume th {
+   padding: 20px 16px;
+   line-height: 1;
+}
+
+.tenchoosusume td {
+   padding: 24px 16px;
+   line-height: 1;
+}
+
+.shop p {
+   text-align: center;
+}
+
+.shitsumon {
+   margin-top: 40px;
+}
+
+.shitsumon p {
+   text-align: center;
+}
+
+.shitsumon .button {
+   padding-top: 45px;
+}
+
+footer .container {
+   flex-direction: row;
+   justify-content: center;
+   align-items: flex-end;
+   padding: 45px 0;
+}
+
+footer dl {
+   margin-top: 65px;
+   padding-right: 100px;
+}
+
+.tenchoosusume img {
+   width: 1080px;
+}
+/* site-header layout */
+.site-header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   display: flex;
+   flex-wrap: wrap;
+   background-color: #9F3448;
+   width: 100%;
+   height: 60px;
+   line-height: 1;
+   z-index: 10;
+}
+
+@media (min-width:768px) {
+   .site-header {
+      align-items: center;
+      justify-content: space-between;
+   }
+}
+
+.site-header .site-logo{
+   font-size: 18px;
+   margin: 0;
+   padding: 20px 0 20px 20px;
+   width: 100%;
+}
+
+@media (min-width:768px) {
+   .site-header .site-logo{
+      display: inline-block;
+      width: 200px;
+      padding: 0 0 0 20px;
+
+   }
+}
+.site-header .site-nav{
+   width: 100%;
+   
+}
+
+@media (min-width:768px) {
+   .site-header .site-nav{
+      width: auto;
+   }
+}
+
+.site-header .main-nav {
+   display: none;
+   padding: 0;
+   margin: 0;
+   background-color: #9F3448;
+   border-bottom: 1px solid #ccc;
+}
+@media (min-width:768px) {
+   .site-header .main-nav {
+   display: block;
+   margin: 0;
+   border-bottom: none;
+   line-height: 0;
+   }
+}
+
+.site-header .main-nav li {
+   list-style: none;
+}
+
+.site-header .main-nav__item a{
+   display: block;
+   padding: 20px;
+   border-top: 1px solid #ccc;
+   font-size: 12px;
+   color: #000;
+}
+@media (min-width:768px) {
+   .site-header .main-nav__item a{
+      border-top: none;
+   }
+}
+.site-header .main-nav__item a:hover{
+   background-color: #000;
+   color: #fff;
+}
+
+/* hamburger switch */
+.site-header input[type="checkbox"]:checked ~ .main-nav {
+   display: block;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+}
+.site-header input[type="checkbox"]:checked ~ .main-nav__item {
+   flex: 1;
+   line-height: 0;
+}
+
+@media (min-width:768px) {
+   .site-header input[type="checkbox"]:checked ~ .main-nav,
+   .site-header input[type="checkbox"]~ .main-nav {
+      display: flex;
+      flex-direction: row;
+   }
+}
+
+/* hamburger icon */
+.site-header .site-nav__toggle {
+   display: none;
+}
+.site-header .site-nav__toggle-label{
+   position: absolute;
+   display: block;
+   top: 10px;
+   right: 10px;
+}
+.site-header  .site-nav__toggle-label span {
+   display: block;
+   width: 40px;
+   height: 39px;
+   background-color: #333;
+   cursor: pointer;
+}
+
+.site-header .site-nav__toggle-label span span{
+   display: block;
+   overflow: hidden;
+   width: 1px;
+   height: 1px;
+}
+.site-header .site-nav__toggle-label span span::before,
+.site-header .site-nav__toggle-label span span::after,
+.site-header .site-nav__toggle-label span::after {
+   position: absolute;
+   left: 10px;
+   content: "";
+   width: 20px;
+   height: 3px;
+   background-color: #fff;
+}
+
+.site-header .site-nav__toggle-label span span::before {
+   top: 10px;
+}
+.site-header .site-nav__toggle-label span span::after {
+   top: 18px;
+}
+.site-header .site-nav__toggle-label span::after {
+   bottom: 10px;
+}
+@media (min-width:768px) {
+   .site-header .site-nav__toggle-label{
+      display: none;
+   }
+}
+/* humberger icon checked */
+.site-header input[type="checkbox"]:checked ~ .site-nav__toggle-label span span::before {
+   top: 19px;
+   transform: rotate(-45deg);
+   -webkit-transform: rotate(-45deg);
+}
+
+.site-header input[type="checkbox"]:checked ~ .site-nav__toggle-label span span::after{
+	display: none;
+}
+
+.site-header input[type="checkbox"]:checked ~ .site-nav__toggle-label span::after {
+	top: 19px;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+}
+.site-main {
+   margin-top: 60px;
+}
+a {
+   text-decoration: none;
+}
